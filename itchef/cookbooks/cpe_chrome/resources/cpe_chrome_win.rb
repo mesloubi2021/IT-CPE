@@ -38,7 +38,7 @@ action :config do
   policy_settings = gen_reg_file_settings(
     doomed_policies, reg_settings
   )
-  template reg_file_path do # ~FB031
+  template reg_file_path do
     source 'chrome_Settings.reg.erb'
     variables(:policies => policy_settings)
     rights :read, 'Everyone', :applies_to_children => true
@@ -129,7 +129,7 @@ action :config do
         "#{prefix}\\Google\\Chrome",
         "#{prefix}\\Google\\Chrome\\Application",
       ].each do |dir|
-        directory dir do # rubocop:disable Chef/Meta/RequireOwnerGroupMode # ~FB024
+        directory dir do # rubocop:disable Chef/Meta/RequireOwnerGroupMode
           rights :read, 'Everyone', :applies_to_children => true
           rights :read_execute, 'Users', :applies_to_children => true
           rights :full_control, ['Administrators', 'SYSTEM'],
@@ -138,7 +138,7 @@ action :config do
         end
       end
 
-      file "create-#{pref_path}" do # rubocop:disable Chef/Meta/RequireOwnerGroupMode # ~FB023
+      file "create-#{pref_path}" do # rubocop:disable Chef/Meta/RequireOwnerGroupMode
         not_if do
           node['cpe_chrome']['mp']['FileContents'].
             to_hash.

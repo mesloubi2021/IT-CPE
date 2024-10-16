@@ -39,6 +39,9 @@ your node.
 * `node.centos9?`
     Is CentOS Stream 9
 
+* `node.centos10?`
+    Is CentOS Stream 10
+
 * `node.centos_max_version?(v)`
     Is RHEL-compatible with a maximum version number of v
 
@@ -78,6 +81,18 @@ your node.
 * `node.fedora36?`
     Is Fedora 36
 
+* `node.fedora37?`
+    Is Fedora 37
+
+* `node.fedora38?`
+    Is Fedora 38
+
+* `node.fedora39?`
+    Is Fedora 39
+
+* `node.fedora40?`
+    Is Fedora 40
+
 * `node.eln?`
     Is Fedora ELN
 
@@ -96,11 +111,14 @@ your node.
 * `node.redhat9?`
     Is Redhat Enterprise Linux 9
 
+* `node.redhat10?`
+    Is Redhat Enterprise Linux 10
+
 * `node.rhel_max_version?(v)`
-    Is Redhat Enterprise Linux with a maximum version number of v
+    Is Redhat Enterprise Linux with a maximum major version number of v
 
 * `node.rhel_min_version?(v)`
-    Is Redhat Enterprise Linux with a minimum version number of v
+    Is Redhat Enterprise Linux with a minimum major version number of v
 
 * `node.rhel?`
     Is Redhat Enterprise Linux
@@ -111,8 +129,14 @@ your node.
 * `node.rhel8?`
     Is Redhat Enterprise Linux 8
 
+* `node.rhel8_8?`
+    Is Redhat Enterprise Linux 8.8
+
 * `node.rhel9?`
     Is Redhat Enterprise Linux 9
+
+* `node.rhel10?`
+    Is Redhat Enterprise Linux 10
 
 * `node.oracle?`
     Is Oracle Enterprise Linux
@@ -218,6 +242,12 @@ your node.
 
 * `node.aristaeos_4_28_or_newer?`
     Is network switch running Arista EOS and OS version is 4.28 or newer
+
+* `node.aristaeos_4_30_or_newer?`
+    Is network switch running Arista EOS and OS version is 4.30 or newer
+
+* `node.aristaeos_4_32_or_newer?`
+    Is network switch running Arista EOS and OS version is 4.32 or newer
 
 * `node.embedded?`
     Is embedded Linux, implies 'node.aristaeos?'. These devices likely have
